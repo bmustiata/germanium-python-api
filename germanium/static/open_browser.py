@@ -1,20 +1,15 @@
 import re
 
-import germaniumdrivers
-from selenium import webdriver
-
 from germanium.driver import GermaniumDriver
 from germanium.iframe_selector import DefaultIFrameSelector
-from germanium.impl._workaround import workaround
-from germanium.wa.firefox_open_browser_with_marionette import \
-    _is_use_marionette_evironment_var_set, \
-    _open_local_firefox_with_marionette
-from .global_germanium_instance import *
-from .wdbuilder.remote_web_driver_url_only_builder import create_url_remote_driver
-from .wdbuilder.local_web_driver_builder import create_local_driver
-from .wdbuilder.remote_web_driver_query_builder import \
+from germanium.static.global_germanium_instance import *
+from germanium.static.wdbuilder.local_web_driver_builder \
+    import create_local_driver
+from germanium.static.wdbuilder.remote_web_driver_query_builder import \
     is_url_with_query_parameters, \
     create_query_parameters_remote_driver
+from germanium.static.wdbuilder.remote_web_driver_url_only_builder \
+    import create_url_remote_driver
 
 
 REMOTE_ADDRESS = re.compile(r"^(\w+?):(.*?)$")

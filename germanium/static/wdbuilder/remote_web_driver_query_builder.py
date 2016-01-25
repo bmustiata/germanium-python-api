@@ -1,5 +1,5 @@
 import re
-import urllib.parse as urlparse
+import urlparse
 
 from selenium import webdriver
 from ._germanium_remote import \

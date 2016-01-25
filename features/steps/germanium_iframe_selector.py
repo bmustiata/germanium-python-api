@@ -3,7 +3,7 @@ from behave import *
 from germanium.static import *
 from germanium import iframe_selector
 
-from features.steps.asserts import *
+from .asserts import *
 
 
 use_step_matcher("re")
